@@ -9,13 +9,13 @@ export const products = [
     name: "Le Diable Tee",
     price: 30000,
     image: product2,
-    colors: ["Black", "White"]
+    colors: ["Black"]
   },
   {
     id: 3,
     name: "See No Evil Hoodie",
     price: 45000,
     image: product3,
-    colors: ["Grey", "Pink", "Black"]
+    colors: ["Black", "Grey", "Orange"]
   }
 ];

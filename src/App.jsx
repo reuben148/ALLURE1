@@ -29,7 +29,7 @@ export default function App() {
   };
 
   const subtotal = cartItems.reduce((total, item) => total + item.price, 0);
-  const shippingFee = 5000;
+  const shippingFee = 7000;
   const totalAmount = subtotal + shippingFee;
 
   return (

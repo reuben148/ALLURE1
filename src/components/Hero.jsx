@@ -16,7 +16,8 @@ export default function Hero() {
         color: '#ff0000', 
         fontWeight: '400', 
         letterSpacing: '-4px',
-        lineHeight: '1'
+        lineHeight: '1',
+        animation: 'pulse 3s infinite ease-in-out'
       }}>
         ALLURE
       </h1>
