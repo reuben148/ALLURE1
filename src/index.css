@@ -150,6 +150,12 @@ a {
   gap: 12px;
 }
 
+.product-card {
+  width: 100%;
+  max-width: 350px;
+  flex: 0 1 350px;
+}
+
 .product-card-image-container {
   background-color: #111;
   aspect-ratio: 3/4;

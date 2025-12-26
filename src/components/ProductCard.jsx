@@ -5,7 +5,7 @@ export default function ProductCard({ product, onAddToCart }) {
   const [selectedColor, setSelectedColor] = useState(product.colors ? product.colors[0] : null);
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+    <div className="product-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <div className="product-card-image-container">
         <img 
           src={product.image} 
