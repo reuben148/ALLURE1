@@ -3,15 +3,78 @@ import React, { useState } from 'react';
 export default function ProductCard({ product, onAddToCart }) {
   const [selectedSize, setSelectedSize] = useState('M');
   const [selectedColor, setSelectedColor] = useState(product.colors ? product.colors[0] : null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  const nextImage = (e) => {
+    e.stopPropagation();
+    if (product.images.length > 1) {
+      setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
+    }
+  };
+
+  const prevImage = (e) => {
+    e.stopPropagation();
+    if (product.images.length > 1) {
+      setCurrentImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+    }
+  };
 
   return (
     <div className="product-card" style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
       <div className="product-card-image-container">
         <img 
-          src={product.image} 
+          src={product.images[currentImageIndex]} 
           alt={product.name}
           className="product-card-image"
         />
+        {product.images.length > 1 && (
+          <>
+            <button 
+              onClick={prevImage}
+              style={{
+                position: 'absolute',
+                left: '10px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.5)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '30px',
+                height: '30px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.2rem'
+              }}
+            >
+              &#8249;
+            </button>
+            <button 
+              onClick={nextImage}
+              style={{
+                position: 'absolute',
+                right: '10px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                background: 'rgba(0,0,0,0.5)',
+                color: '#fff',
+                border: 'none',
+                borderRadius: '50%',
+                width: '30px',
+                height: '30px',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.2rem'
+              }}
+            >
+              &#8250;
+            </button>
+          </>
+        )}
       </div>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
@@ -68,7 +131,7 @@ export default function ProductCard({ product, onAddToCart }) {
       <button 
         className="btn-primary" 
         style={{ width: '100%', marginTop: '4px', fontSize: '0.7rem', letterSpacing: '2px', padding: '14px' }}
-        onClick={() => onAddToCart(product, selectedSize, selectedColor)}
+        onClick={() => onAddToCart({ ...product, image: product.images[0] }, selectedSize, selectedColor)}
       >
         Add to Cart
       </button>
