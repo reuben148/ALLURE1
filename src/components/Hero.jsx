@@ -18,7 +18,7 @@ export default function Hero() {
         letterSpacing: '-4px',
         lineHeight: '1'
       }}>
-        SNE
+        ALLURE
       </h1>
     </header>
   );

@@ -36,7 +36,7 @@ export default function ProductCard({ product, onAddToCart }) {
             fontWeight: '600'
           }}
         >
-          {['S', 'M', 'L', 'XL', 'XXL'].map(size => (
+          {['S', 'M', 'L'].map(size => (
             <option key={size} value={size}>{size}</option>
           ))}
         </select>

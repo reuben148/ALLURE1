@@ -19,7 +19,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
           letterSpacing: '-1px',
           color: '#fff'
         }}>
-          SNE
+          ALLURE
         </div>
         <a href="#" style={{ fontSize: '0.8rem', fontWeight: '700', color: '#fff', letterSpacing: '1px', fontFamily: 'var(--font-sans)' }}>STORE</a>
       </div>

@@ -3,13 +3,7 @@ import product2 from '../assets/product2.png';
 import product3 from '../assets/product3.jpg';
 
 export const products = [
-  {
-    id: 1,
-    name: "Yesterday Today Tomorrow Tee",
-    price: 25000,
-    image: product1,
-    colors: ["Black", "White"]
-  },
+
   {
     id: 2,
     name: "Le Diable Tee",

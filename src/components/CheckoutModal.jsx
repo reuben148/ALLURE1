@@ -32,7 +32,7 @@ export default function CheckoutModal({ isOpen, onClose, cartItems, totalAmount,
 
   const sendOrderEmail = async (paymentDetails = null) => {
     // Generate a simple Order ID
-    const orderId = `SNE-${Math.floor(100000 + Math.random() * 900000)}`;
+    const orderId = `ALLURE-${Math.floor(100000 + Math.random() * 900000)}`;
 
     // Prepare template params
     const templateParams = {
@@ -126,7 +126,7 @@ export default function CheckoutModal({ isOpen, onClose, cartItems, totalAmount,
               <p style={{ fontSize: '0.9rem', marginBottom: '4px' }}>Please transfer <strong>₦{totalAmount.toLocaleString()}</strong> to:</p>
               <p style={{ fontSize: '0.9rem', marginBottom: '4px' }}>Bank: <strong>GTBank</strong></p>
               <p style={{ fontSize: '0.9rem', marginBottom: '4px' }}>Account Number: <strong>1234567890</strong></p>
-              <p style={{ fontSize: '0.9rem' }}>Account Name: <strong>SNE Clothing</strong></p>
+              <p style={{ fontSize: '0.9rem' }}>Account Name: <strong>ALLURE Clothing</strong></p>
               <p style={{ fontSize: '0.8rem', color: '#888', marginTop: '12px' }}>
                 Please send proof of payment to reubenluka555@gmail.com or WhatsApp 09071009969.
               </p>
